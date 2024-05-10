@@ -27,9 +27,9 @@ const LandingPageView = () => {
     <body>
       <Navbar />
 
-      <section id="about-me" className="mt-5 mx-4 lg:mx-20">
-        <div className="rounded-lg shadow-md p-4 flex flex-col lg:flex-row lg:gap-10">
-          <div className="lg:w-1/2 flex flex-col">
+      <section id="db" className="mt-5 mx-4 lg:mx-20">
+        <div className="rounded-lg shadow-md p-4 flex flex-col lg:flex-row lg:gap-10 transform transition-transform duration-300 hover:scale-105">
+          <div className="lg:w-1/2 flex flex-col ">
             <h2 className="text-3xl font-bold mb-5">
               Qué es una Base de Datos
             </h2>
@@ -69,7 +69,7 @@ const LandingPageView = () => {
         </div>
       </section>
 
-      <section className="mt-10 mx-4 lg:mx-20">
+      <section id="typedb" className="mt-10 mx-4 lg:mx-20 ">
         <h2 className="text-center text-3xl font-bold">
           Tipos de bases de datos
         </h2>
@@ -78,7 +78,7 @@ const LandingPageView = () => {
             <p
               key={type.title}
               onClick={() => openModalWithContent(type.content, type.title)}
-              className={`flex-auto text-center py-2 rounded-lg border border-gray-300 shadow text-lg font-semibold hover:${type.hoverColor}`}
+              className={`flex-auto text-center py-2 rounded-lg border border-gray-300 shadow text-lg font-semibold hover:bg-gradient-to-b from-gray-700 to-gray-300`}
             >
               {type.title}
             </p>
@@ -86,8 +86,8 @@ const LandingPageView = () => {
         </div>
       </section>
 
-      <section id="manejadores" className="mt-5 mb-10 mx-4 lg:mx-20">
-        <div className="rounded-lg shadow-md p-4">
+      <section id="controllersdb" className="mt-5 mb-10 mx-4 lg:mx-20">
+        <div className="rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105">
           <div className="relative">
             <div
               style={{ backgroundImage: `url(${imagenDb})`, opacity: 0.7 }}
@@ -117,7 +117,7 @@ const LandingPageView = () => {
 
       <section id="concepts" className="mt-5 mb-10 mx-4 lg:mx-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
-        <div className="rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105">
           <div className="text-center font-medium text-xl">Entidad</div>
           <div className="text-wrap mx-auto text-justify">
             En bases de datos, una entidad es la representación de un objeto o
@@ -127,7 +127,7 @@ const LandingPageView = () => {
           </div>
         </div>
 
-        <div className="rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105">
           <div className="text-center font-medium text-xl">Relación</div>
           <div className="text-wrap mx-auto text-justify">
             La relación de una base de datos es el vínculo que se establece
@@ -138,7 +138,7 @@ const LandingPageView = () => {
           </div>
         </div>
 
-        <div className="rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105">
           <div className="text-center font-medium text-xl">Atributo</div>
           <div className="text-wrap mx-auto text-justify">
             Son las características o propiedades que describen a la entidad
@@ -151,7 +151,7 @@ const LandingPageView = () => {
           </div>
         </div>
 
-        <div className="rounded-lg shadow-md p-4">
+        <div className="rounded-lg shadow-md p-4 transform transition-transform duration-300 hover:scale-105">
           <div className="text-center font-medium text-xl">Cardinalidad</div>
           <div className="text-wrap mx-auto text-justify">
             La cardinalidad de una relación es el número de filas relacionadas
@@ -164,56 +164,37 @@ const LandingPageView = () => {
       </div>
     </section>
 
-    <section className="mt-10 mx-4 lg:mx-20">
-  <div className="rounded-lg shadow-md p-4 lg:flex lg:flex-row lg:gap-10 items-center">
-    {/* Contenido de texto */}
-    <div className="text-center text-3xl font-bold mb-5 lg:w-1/2">
-
-    </div>
-
+    <section id="model-e-r" className="mt-5 mb-5 mx-4 lg:mx-20">
+  <div className="rounded-lg shadow-md p-4 flex flex-col lg:flex-row lg:gap-10 transform transition-transform duration-300 hover:scale-105">
     {/* Imagen */}
-  </div>
-</section>
-<section id="about-me" className="mt-5 mx-4 lg:mx-20">
-  <div className="rounded-lg shadow-md p-4 flex flex-col lg:flex-row lg:gap-10">
-    {/* Imagen */}
-    <div
-      style={{ backgroundImage: `url(${imagenEt})` }}
-      className="bg-cover opacity-70 bg-no-repeat bg-center p-4 rounded-lg lg:w-1/2 flex items-center justify-center"
-    >
-      <div className="relative w-80 h-60 rounded-lg ">
-
-
-      </div>
+    <div className="bg-cover bg-no-repeat bg-center p-4 rounded-lg lg:w-1/2 flex items-center justify-center">
+      <img src={imagenEt} alt="Imagen E-R" className="w-full h-max opacity-80 lg:max-h-full lg:max-w-full rounded-lg" />
     </div>
     
     {/* Contenido de texto */}
     <div className="lg:w-1/2 flex flex-col">
       <h2 className="text-3xl font-bold mb-5">
-      Que es Modelo E-R "Entidad-relación"
+        Que es Modelo E-R "Entidad-relación"
       </h2>
       <p className="text-gray-300 text-xl">
-      <div >
-      El modelo entidad relación es una herramienta que permite representar de manera simplificada los componentes que participan en un proceso de negocio y el modo en el que estos se relacionan entre sí.
-      <br /><br />
-      El modelo entidad relación tiene tres elementos principales:
-      <ul className="mt-4 list-disc">
+        El modelo entidad-relación es una herramienta que permite representar de manera simplificada los componentes que participan en un proceso de negocio y el modo en el que estos se relacionan entre sí.
+        <br /><br />
+        El modelo entidad-relación tiene tres elementos principales:
+      </p>
+      <ul className="mt-4 list-disc text-gray-300 text-xl pl-4">
         <li>
-          Entidades: El modelo contará con una entidad por cada uno de los componentes del proceso de negocio. Así, en un negocio de venta de suscripciones a revistas, podemos tener entidades “Cliente”, “Dirección”, “Factura”, “Producto”, o “Incidencias”, entre otras.
+          <span className="font-bold">Entidades: </span>  El modelo contará con una entidad por cada uno de los componentes del proceso de negocio. Así, en un negocio de venta de suscripciones a revistas, podemos tener entidades como "Cliente", "Dirección", "Factura", "Producto", o "Incidencias", entre otras.
         </li>
         <li>
-          Atributos: Los atributos, componente fundamental de cada modelo entidad-relación, nos permiten describir las propiedades que tiene cada entidad. “Nombre”, “Primer Apellido”, “Segundo Apellido”, ”Fecha de nacimiento”, “Género” o “Segmento de valor” serán atributos de la entidad “Cliente”.
+          <span className="font-bold">Atributos:</span> Los atributos, componente fundamental de cada modelo entidad-relación, nos permiten describir las propiedades que tiene cada entidad. "Nombre", "Primer Apellido", "Segundo Apellido", "Fecha de nacimiento", "Género" o "Segmento de valor" serán atributos de la entidad "Cliente".
         </li>
         <li>
-          Relaciones: Con las relaciones se establecen vínculos entre parejas de entidades. Cada “Cliente” tendrá una “Dirección” de envío en la que recibirá la suscripción, podrá estar suscrito a uno o varios “Productos”, y recibirá una “Factura” con la periodicidad acordada.
+          <span className="font-bold" >Relaciones:</span> Con las relaciones se establecen vínculos entre parejas de entidades. Cada "Cliente" tendrá una "Dirección" de envío en la que recibirá la suscripción, podrá estar suscrito a uno o varios "Productos", y recibirá una "Factura" con la periodicidad acordada.
         </li>
       </ul>
     </div>
-      </p>
-    </div>
   </div>
 </section>
-
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <div>
