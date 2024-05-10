@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import typeDB from "../conts/types-db";
 import imagenDb from "../img/Gestor-base-de-datos-que-es.png";
 
-
+import imagenEt from "../img/modelo-de-entidad-relacion.jpg";
 
 
 const LandingPageView = () => {
@@ -164,37 +164,57 @@ const LandingPageView = () => {
       </div>
     </section>
 
-      <section className="mt-10 mx-4 lg:mx-20">
-            <div className="rounded-lg shadow-md p-4 lg:flex-row lg:gap-10">
-              <div className="text-center text-3xl font-bold mb-5">
-                Que es Modelo E-R "Entidad-relación"
-              </div>
-              <div>
+    <section className="mt-10 mx-4 lg:mx-20">
+  <div className="rounded-lg shadow-md p-4 lg:flex lg:flex-row lg:gap-10 items-center">
+    {/* Contenido de texto */}
+    <div className="text-center text-3xl font-bold mb-5 lg:w-1/2">
 
-              El modelo entidad relación es una herramienta que permite representar de manera simplificada los componentes que participan en un proceso de negocio y el modo en el que estos se relacionan entre sí.
+    </div>
 
-              El modelo entidad relación tiene tres elementos principales:
-              <ul className="mt-4 list-disc">
-                <li>
-                Entidades: El modelo contará con una entidad por cada uno de los componentes del proceso de negocio. Así, en un negocio de venta de suscripciones a revistas, podemos tener entidades “Cliente”, “Dirección”, “Factura”, “Producto”, o “Incidencias”, entre otras.
-                </li>
-                <li>
-
-                Atributos: Los atributos, componente fundamental de cada modelo entidad-relación, nos permiten describir las propiedades que tiene cada entidad. “Nombre”, “Primer Apellido”, “Segundo Apellido”, ”Fecha de nacimiento”, “Género” o “Segmento de valor” serán atributos de la entidad “Cliente”.
-                </li>
-
-                <li>
-                  Relaciones: Con las relaciones se establecen vínculos entre parejas de entidades. Cada “Cliente” tendrá una “Dirección” de envío en la que recibirá la suscripción, podrá estar suscrito a uno o varios “Productos”, y recibirá una “Factura” con la periodicidad acordada.
-                </li>
-              </ul>
-             
+    {/* Imagen */}
+  </div>
+</section>
+<section id="about-me" className="mt-5 mx-4 lg:mx-20">
+  <div className="rounded-lg shadow-md p-4 flex flex-col lg:flex-row lg:gap-10">
+    {/* Imagen */}
+    <div
+      style={{ backgroundImage: `url(${imagenEt})` }}
+      className="bg-cover opacity-70 bg-no-repeat bg-center p-4 rounded-lg lg:w-1/2 flex items-center justify-center"
+    >
+      <div className="relative w-80 h-60 rounded-lg ">
 
 
-              </div>
-          
-            </div>
+      </div>
+    </div>
+    
+    {/* Contenido de texto */}
+    <div className="lg:w-1/2 flex flex-col">
+      <h2 className="text-3xl font-bold mb-5">
+      Que es Modelo E-R "Entidad-relación"
+      </h2>
+      <p className="text-gray-300 text-xl">
+      <div >
+      El modelo entidad relación es una herramienta que permite representar de manera simplificada los componentes que participan en un proceso de negocio y el modo en el que estos se relacionan entre sí.
+      <br /><br />
+      El modelo entidad relación tiene tres elementos principales:
+      <ul className="mt-4 list-disc">
+        <li>
+          Entidades: El modelo contará con una entidad por cada uno de los componentes del proceso de negocio. Así, en un negocio de venta de suscripciones a revistas, podemos tener entidades “Cliente”, “Dirección”, “Factura”, “Producto”, o “Incidencias”, entre otras.
+        </li>
+        <li>
+          Atributos: Los atributos, componente fundamental de cada modelo entidad-relación, nos permiten describir las propiedades que tiene cada entidad. “Nombre”, “Primer Apellido”, “Segundo Apellido”, ”Fecha de nacimiento”, “Género” o “Segmento de valor” serán atributos de la entidad “Cliente”.
+        </li>
+        <li>
+          Relaciones: Con las relaciones se establecen vínculos entre parejas de entidades. Cada “Cliente” tendrá una “Dirección” de envío en la que recibirá la suscripción, podrá estar suscrito a uno o varios “Productos”, y recibirá una “Factura” con la periodicidad acordada.
+        </li>
+      </ul>
+    </div>
+      </p>
+    </div>
+  </div>
+</section>
 
-      </section>
+
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <div>
           <h1 className="text-lg text-center font-bold mb-2">{modalTitle}</h1>
