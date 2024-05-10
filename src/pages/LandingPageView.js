@@ -49,19 +49,19 @@ const LandingPageView = () => {
             <div className="relative w-80 h-60 rounded-lg">
               <div className="absolute top-0 inset-x-0 flex items-center justify-center mt-5">
                 <p className="px-4 py-2 bg-gray-700 text-white border border-gray-300 rounded-lg shadow text-lg font-semibold">
-                  Backend
+                  MariaDB
                 </p>
               </div>
 
               <div className="absolute inset-0 flex items-center justify-center shadow-lg rounded-lg">
                 <p className="py-2 bg-blue-600 text-white rounded-lg shadow text-lg font-semibold">
-                  Database
+                  Postgresql
                 </p>
               </div>
 
               <div className="absolute rounded-lg bottom-0 inset-x-0 flex items-center justify-center">
                 <p className="px-6 py-2 bg-gray-700 text-white border border-gray-300 rounded-lg shadow text-lg font-semibold mb-5">
-                  Server
+                  MongoDB
                 </p>
               </div>
             </div>
