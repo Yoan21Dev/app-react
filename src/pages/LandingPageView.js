@@ -55,7 +55,7 @@ const LandingPageView = () => {
 
               <div className="absolute inset-0 flex items-center justify-center shadow-lg rounded-lg">
                 <p className="py-2 bg-blue-600 text-white rounded-lg shadow text-lg font-semibold">
-                  Postgresql
+                  PostgreSQL
                 </p>
               </div>
 
